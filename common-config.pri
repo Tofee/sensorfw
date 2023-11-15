@@ -40,6 +40,7 @@ contains(CONFIG,hybris) {
         DEFINES += USE_BINDER=1
         PKGCONFIG += libgbinder libglibutil gobject-2.0 glib-2.0
     } else {
+        LIBS += -lhybris-common
         PKGCONFIG += android-headers libhardware
     }
 }
@@ -50,6 +51,7 @@ config_hybris {
         DEFINES += USE_BINDER=1
         PKGCONFIG += libgbinder libglibutil gobject-2.0 glib-2.0
     } else {
+        LIBS += -lhybris-common
         PKGCONFIG += android-headers libhardware
     }
 }
